@@ -1,0 +1,38 @@
+@include keyframes(flipYRight) {
+  0% {
+    @include transform(perspective(400px) rotateY(0deg));
+  }
+  100% {
+    @include transform(perspective(400px) rotateY(180deg));
+  }
+}
+
+@mixin flipYRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(flipYRight);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}
+
+@include keyframes(flipYLeft) {
+  0% {
+    @include transform(perspective(400px) rotateY(0deg));
+  }
+  100% {
+    @include transform(perspective(400px) rotateY(-180deg));
+  }
+}
+
+
+@mixin flipYLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(flipYLeft);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}
